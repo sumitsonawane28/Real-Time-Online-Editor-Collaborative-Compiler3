@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-vscode-bg: #0d1117;
+  --color-vscode-sidebar: #161b22;
+  --color-vscode-activity: #010409;
+  --color-vscode-border: #30363d;
+  --color-vscode-terminal: #010409;
+  --color-vscode-status: #238636;
+  --color-vscode-active-tab: #0d1117;
+  --color-vscode-accent: #f78166;
+  --color-vscode-text: #c9d1d9;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-vscode-bg text-vscode-text overflow-hidden;
+  }
+}
+
+/* Custom Scrollbar for Monaco feeling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-vscode-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border: 2px solid var(--color-vscode-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444c56;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
